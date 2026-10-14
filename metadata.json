@@ -1,6 +1,6 @@
 {
-  "name": "Go Global Edge - Wellness Store",
-  "description": "Professional e-commerce platform for Go Global Edge featuring Double Root Coffee 100% Arabica and SlimFit Gluco-Burn formulas with orders, payments, inventory, and admin dashboard.",
+  "name": "Restore Body Cells - Wellness Store",
+  "description": "Professional e-commerce platform for Restore Body Cells featuring Double Root Coffee 100% Arabica and SlimFit Gluco-Burn formulas with orders, payments, inventory, and admin dashboard.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
