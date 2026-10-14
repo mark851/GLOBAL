@@ -2,7 +2,7 @@
   "entities": {
     "Product": {
       "title": "Product",
-      "description": "Wellness product in the Go Global Edge store",
+      "description": "Wellness product in the Restore Body Cells",
       "type": "object",
       "properties": {
         "id": { "type": "string" },
