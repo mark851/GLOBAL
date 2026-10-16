@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 opacity-25 pointer-events-none mix-blend-overlay">
         <img
           src="/src/assets/images/homepage_hero_wellness_1791963391207.jpg"
-          alt="Go Global Edge Brand Atmosphere"
+          alt="Restore Boby Cells Brand Atmosphere"
           className="w-full h-full object-cover"
         />
       </div>
@@ -91,69 +91,78 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Hero Visual Product Showcase */}
-          <div className="lg:col-span-5 relative">
-            {displayedProducts.length > 0 ? (
-              <div
-                className={`grid ${
-                  displayedProducts.length === 1 ? 'grid-cols-1 max-w-xs' : 'grid-cols-2 max-w-md'
-                } gap-4 mx-auto`}
-              >
-                {displayedProducts.map((p) => (
-                  <div
-                    key={p.id}
-                    onClick={() => setSelectedProduct(p)}
-                    className="group cursor-pointer bg-emerald-900/80 rounded-2xl p-3 border border-emerald-700/60 hover:border-amber-400/70 transition-all hover:scale-[1.02] shadow-2xl relative overflow-hidden"
-                  >
-                    <div className="relative aspect-square rounded-xl overflow-hidden bg-black/40 mb-2.5">
-                      <img
-                        src={p.images?.[0] || '/src/assets/images/double_root_coffee_1791963357040.jpg'}
-                        alt={p.name}
-                        className="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <span className="absolute top-2 left-2 bg-black/85 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-400/40 truncate max-w-[85%]">
-                        {p.packageInfo || p.category}
-                      </span>
-                    </div>
-                    <h3 className="font-serif font-bold text-sm text-white group-hover:text-amber-300 transition-colors truncate">
-                      {p.name}
-                    </h3>
-                    <p className="text-[11px] text-emerald-200/90 mb-1.5 line-clamp-1">
-                      {p.subtitle || p.category}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-black text-amber-400">
-                        UGX {(p.salePrice || p.price).toLocaleString()}
-                      </span>
-                      <span className="text-[10px] text-emerald-300 group-hover:underline">View →</span>
-                    </div>
-                  </div>
-                ))}
+          {/* Right Column: Hero Visual Showcase (Single Image) */}
+          <div className="lg:col-span-5 relative max-w-md mx-auto w-full">
+            <div
+              onClick={() => {
+                const revicellProduct = products.find((p) =>
+                  p.name.toLowerCase().includes('revicell') || p.id.includes('revicell')
+                );
+                if (revicellProduct) {
+                  setSelectedProduct(revicellProduct);
+                } else {
+                  handleShopNow();
+                }
+              }}
+              className="group cursor-pointer bg-gradient-to-b from-emerald-900/90 to-emerald-950/95 rounded-3xl p-4 border border-emerald-700/60 hover:border-amber-400/80 transition-all duration-300 hover:scale-[1.01] shadow-2xl relative overflow-hidden"
+            >
+              {/* Image Container */}
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-black/40 mb-3.5 shadow-inner">
+                <img
+                  src="/src/assets/images/revicell_cellular_nutrition_1792130422406.jpg"
+                  alt="Revicell Cellular Botanical Nutrition"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                {/* Floating badge on image */}
+                <div className="absolute top-3 left-3 bg-emerald-950/90 backdrop-blur-md text-amber-300 text-[11px] font-bold px-3 py-1 rounded-full border border-amber-400/40 shadow-lg flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Flagship Formula • 1.5g x 20 Sachets</span>
+                </div>
+                <div className="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-lg border border-white/20">
+                  Pure Botanical Blend
+                </div>
               </div>
-            ) : (
-              <div className="p-8 rounded-2xl bg-emerald-900/60 border border-emerald-700/50 text-center space-y-3 max-w-md mx-auto">
-                <Sparkles className="w-8 h-8 text-amber-300 mx-auto" />
-                <h3 className="font-serif font-bold text-lg text-white">Go Global Edge Wellness</h3>
-                <p className="text-xs text-emerald-200 leading-relaxed">
-                  Natural formulations, transparent labeling, and door-to-door Uganda courier service.
+
+              {/* Product Info Bar */}
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400">
+                    Cellular Vitality & Nutrition
+                  </span>
+                  <span className="text-xs font-black text-amber-300 bg-emerald-800/80 px-2 py-0.5 rounded-md border border-emerald-700">
+                    UGX 160,000
+                  </span>
+                </div>
+
+                <h3 className="font-serif font-black text-lg text-white group-hover:text-amber-300 transition-colors">
+                  Revicell Cellular Wellness
+                </h3>
+
+                <p className="text-xs text-emerald-200/90 leading-relaxed line-clamp-2">
+                  French melon SOD extract, grape seed polyphenols, and green apple phytochemicals designed for daily cellular protection and renewal.
                 </p>
-                <button
-                  onClick={handleShopNow}
-                  className="px-4 py-2 bg-emerald-700 hover:bg-emerald-600 rounded-xl text-xs font-bold text-white shadow-sm inline-flex items-center gap-1.5"
-                >
-                  <span>Explore Catalog</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-amber-300" />
-                </button>
+
+                <div className="flex items-center justify-between pt-2 border-t border-emerald-800/60 text-xs">
+                  <span className="text-emerald-300 font-semibold flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>In Stock • Ready to Dispatch</span>
+                  </span>
+                  <span className="text-amber-400 font-bold group-hover:translate-x-1 transition-transform flex items-center gap-1">
+                    <span>Order Now</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
               </div>
-            )}
+            </div>
 
             {/* Floating Trust Pill */}
-            <div className="mt-4 p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 flex items-center justify-between text-xs text-white">
+            <div className="mt-3.5 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/15 flex items-center justify-between text-xs text-white">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>MTN & Airtel MoMo Supported</span>
               </div>
-              <span className="text-amber-300 font-bold">Fast Courier</span>
+              <span className="text-amber-300 font-bold">Fast Courier Dispatch</span>
             </div>
           </div>
         </div>

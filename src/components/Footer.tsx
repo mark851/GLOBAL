@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newsletterEmail.trim()) return;
-    showNotification('success', 'Thank you! You have subscribed to Go Global Edge wellness updates.');
+    showNotification('success', 'Thank you! You have subscribed to Restore Boby Cells wellness updates.');
     setNewsletterEmail('');
   };
 
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <div className="text-xl font-black tracking-tight text-white font-serif leading-none">
-                  GO GLOBAL <span className="text-amber-500">EDGE</span>
+                  RESTORE <span className="text-amber-500">BOBY CELLS</span>
                 </div>
                 <p className="text-[10px] tracking-widest uppercase font-semibold text-emerald-400 mt-1">
                   Wellness Product Collection
@@ -253,7 +253,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Copyright */}
         <div className="pt-6 border-t border-emerald-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-400">
           <div>
-            © {new Date().getFullYear()} Go Global Edge. All rights reserved. Registered in Uganda.
+            © {new Date().getFullYear()} Restore Boby Cells. All rights reserved. Registered in Uganda.
           </div>
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1.5">
@@ -300,7 +300,7 @@ export const Footer: React.FC = () => {
               {activePolicyModal === 'privacy' && (
                 <>
                   <p>
-                    Go Global Edge is committed to protecting your personal information. We collect customer names, telephone numbers, and delivery addresses strictly for order fulfillment.
+                    Restore Boby Cells is committed to protecting your personal information. We collect customer names, telephone numbers, and delivery addresses strictly for order fulfillment.
                   </p>
                   <p>
                     We NEVER collect, transmit, or store your Mobile Money PINs or banking credentials. Data is securely held in compliance with privacy guidelines.
@@ -310,7 +310,7 @@ export const Footer: React.FC = () => {
               {activePolicyModal === 'terms' && (
                 <>
                   <p>
-                    By purchasing through Go Global Edge, you agree that dietary supplements must be used according to package directions.
+                    By purchasing through Restore Boby Cells, you agree that dietary supplements must be used according to package directions.
                   </p>
                   <p>
                     All prices are quoted in Ugandan Shillings (UGX). Orders are fulfilled upon payment verification through authenticated provider callbacks.

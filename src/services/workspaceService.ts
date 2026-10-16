@@ -44,13 +44,13 @@ export async function sendOrderReceiptEmail(
 
   const emailContent = [
     `To: ${toEmail}`,
-    `Subject: Order Confirmation #${order.orderNumber} - Go Global Edge`,
+    `Subject: Order Confirmation #${order.orderNumber} - Restore Boby Cells`,
     'Content-Type: text/plain; charset=utf-8',
     'MIME-Version: 1.0',
     '',
     `Dear ${order.customerName},`,
     '',
-    `Thank you for shopping with Go Global Edge! Your order #${order.orderNumber} has been received successfully.`,
+    `Thank you for shopping with Restore Boby Cells! Your order #${order.orderNumber} has been received successfully.`,
     '',
     '--- ORDER DETAILS ---',
     itemsList,
@@ -68,7 +68,7 @@ export async function sendOrderReceiptEmail(
     'Need assistance? Contact our WhatsApp support at +256707658107.',
     '',
     'Warm regards,',
-    'Go Global Edge Wellness Team',
+    'Restore Boby Cells Wellness Team',
   ]
     .filter(Boolean)
     .join('\r\n');
@@ -117,7 +117,7 @@ export async function exportOrderToGoogleDrive(
     .join('\n');
 
   const receiptContent = `=====================================================
-GO GLOBAL EDGE - OFFICIAL PURCHASE RECEIPT
+RESTORE BOBY CELLS - OFFICIAL PURCHASE RECEIPT
 =====================================================
 Order Number:     #${order.orderNumber}
 Date:             ${new Date(order.createdAt).toLocaleString()}
@@ -153,7 +153,7 @@ Contact WhatsApp: +256707658107
   const metadata = {
     name: `Receipt_Order_${order.orderNumber}.txt`,
     mimeType: 'text/plain',
-    description: `Official receipt for Go Global Edge order #${order.orderNumber}`,
+    description: `Official receipt for Restore Boby Cells order #${order.orderNumber}`,
   };
 
   const boundary = '-------314159265358979323846';
@@ -219,9 +219,9 @@ export async function exportInventoryToGoogleDrive(
   const csvContent = csvHeader + csvRows;
 
   const metadata = {
-    name: `GoGlobalEdge_Inventory_${new Date().toISOString().slice(0, 10)}.csv`,
+    name: `RestoreBobyCells_Inventory_${new Date().toISOString().slice(0, 10)}.csv`,
     mimeType: 'text/csv',
-    description: 'Go Global Edge Real-time Inventory Snapshot',
+    description: 'Restore Boby Cells Real-time Inventory Snapshot',
   };
 
   const boundary = '-------314159265358979323846';

@@ -42,7 +42,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ingredients:
       '100% Premium Arabica Coffee, Maca Root Extract (Lepidium meyenii), Tongkat Ali Root Extract, Ashwagandha Root, Panax Ginseng Extract.',
     packageInfo: '250g Luxury Pouch | 100% Arabica | Tamper-Evident Seal',
-    manufacturer: 'Go Global Edge Labs, Manufactured under strict GMP Quality Standards',
+    manufacturer: 'Restore Boby Cells Labs, Manufactured under strict GMP Quality Standards',
     rating: 4.9,
     reviewCount: 46,
     createdAt: new Date().toISOString(),
@@ -50,10 +50,10 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'slimfit-gluco-burn',
-    name: 'GoGlobal Edge SlimFit Gluco-Burn Formula',
+    name: 'SlimFit Gluco-Burn Formula',
     subtitle: 'Converts Excess Fat • Moderates Appetite • 60 Vegan Capsules',
     description:
-      'GoGlobal Edge SlimFit Gluco-Burn Formula is the premier targeted dietary supplement with standardized herbal extracts designed to help convert excess fat into usable energy, moderate healthy appetite, boost metabolism, and promote balanced body wellness with zero synthetic fillers.',
+      'Restore Boby Cells SlimFit Gluco-Burn Formula is the premier targeted dietary supplement with standardized herbal extracts designed to help convert excess fat into usable energy, moderate healthy appetite, boost metabolism, and promote balanced body wellness with zero synthetic fillers.',
     price: 140000,
     salePrice: 125000,
     stock: 60,
@@ -67,9 +67,34 @@ export const INITIAL_PRODUCTS: Product[] = [
     ingredients:
       'Standardized Garcinia Cambogia Extract, Green Tea Extract (EGCG 50%), Berberine HCl, Chromium Picolinate, Ceylon Cinnamon Bark, Vegan Cellulose Capsule.',
     packageInfo: '60 Vegan Capsules | 30-Day Supply | Certified Plant-Based',
-    manufacturer: 'Go Global Edge Labs, Manufactured under GMP Quality Standards',
+    manufacturer: 'Restore Boby Cells Labs, Manufactured under GMP Quality Standards',
     rating: 4.8,
     reviewCount: 52,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'revicell-cellular-nutrition',
+    name: 'Revicell Cellular Botanical Nutrition',
+    subtitle: 'French Melon, Grape Seed & Apple Phytochemicals • 20 Sachets',
+    description:
+      'Revicell Cellular Botanical Nutrition delivers standardized natural botanical antioxidants and enzymes including SOD from French cantaloupe melon, grape seed extract, and green apple polyphenols. Packaged in convenient daily sachets for cellular energy, vitality, and immune support.',
+    price: 180000,
+    salePrice: 160000,
+    stock: 50,
+    sku: 'RBC-REV-01',
+    category: 'Cellular Wellness',
+    images: ['/src/assets/images/revicell_cellular_nutrition_1792130422406.jpg'],
+    featured: true,
+    status: 'published',
+    directions:
+      'Dissolve 1 sachet (1.5g) under the tongue or in 100ml of room temperature water once daily before breakfast.',
+    ingredients:
+      'French Cantaloupe Melon Extract (Superoxide Dismutase), Grape Seed Extract (Proanthocyanidins), Green Apple Stem Extracts, L-Glutathione, Vitamin C.',
+    packageInfo: '1.5g x 20 Sachets | Tamper-Evident Box',
+    manufacturer: 'Restore Boby Cells Labs, Manufactured under GMP Quality Standards',
+    rating: 5.0,
+    reviewCount: 38,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
@@ -77,7 +102,7 @@ export const INITIAL_PRODUCTS: Product[] = [
 
 export const INITIAL_SETTINGS: StoreSettings = {
   id: 'store_config',
-  businessName: 'Go Global Edge',
+  businessName: 'Restore Boby Cells',
   contactEmail: 'maserekasandra66@gmail.com',
   phone: '+256774406640',
   whatsapp: '+256707658107',
@@ -87,12 +112,12 @@ export const INITIAL_SETTINGS: StoreSettings = {
   deliveryWakiso: 15000,
   deliveryUpcountry: 25000,
   freeDeliveryThreshold: 300000,
-  heroTitle: 'WELCOME TO GO GLOBAL EDGE',
+  heroTitle: 'WELCOME TO RESTORE BOBY CELLS',
   heroSubtitle:
     'Discover Our Wellness Product Collection — Pure, Science-Backed Formulations for Men’s Vitality & Metabolic Balance',
   announcement: 'Fast Delivery Across Uganda • Verified Quality Assured • WhatsApp Orders Active',
   missionStatement:
-    'At Go Global Edge, our mission is to empower communities across Uganda and East Africa with authentic, ethically formulated wellness supplements. We reject misleading medical claims and champion transparent, verified nutritional products that inspire vitality and active living.',
+    'At Restore Boby Cells, our mission is to empower communities across Uganda and East Africa with authentic, ethically formulated wellness supplements. We reject misleading medical claims and champion transparent, verified nutritional products that inspire vitality and active living.',
   sandboxMode: true,
   adminSecurityKey: 'EDGE2026',
   updatedAt: new Date().toISOString(),
@@ -209,6 +234,15 @@ export async function seedInitialStoreData() {
       if (data.phone !== '+256774406640') updates.phone = '+256774406640';
       if (data.contactEmail !== 'maserekasandra66@gmail.com') {
         updates.contactEmail = 'maserekasandra66@gmail.com';
+      }
+      if (data.businessName === 'Go Global Edge' || !data.businessName) {
+        updates.businessName = 'Restore Boby Cells';
+      }
+      if (data.heroTitle === 'WELCOME TO GO GLOBAL EDGE') {
+        updates.heroTitle = 'WELCOME TO RESTORE BOBY CELLS';
+      }
+      if (data.missionStatement && data.missionStatement.includes('Go Global Edge')) {
+        updates.missionStatement = data.missionStatement.replace(/Go Global Edge/g, 'Restore Boby Cells');
       }
       if (Object.keys(updates).length > 0) {
         updates.updatedAt = new Date().toISOString();

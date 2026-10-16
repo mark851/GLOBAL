@@ -73,7 +73,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-amber-400" />
             <span className="text-xs uppercase font-bold tracking-wider text-amber-300">
-              Verified Product Information • Go Global Edge
+              Verified Product Information • Restore Boby Cells
             </span>
           </div>
           <button

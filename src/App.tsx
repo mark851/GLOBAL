@@ -191,7 +191,7 @@ const MainAppContent: React.FC = () => {
                   Our Mission: Transparent Wellness for Uganda
                 </h2>
                 <p className="text-sm text-emerald-100/90 leading-relaxed">
-                  Go Global Edge was established to deliver genuine, ethical, and responsibly formulated wellness supplements to our communities across Uganda and East Africa.
+                  Restore Boby Cells was established to deliver genuine, ethical, and responsibly formulated wellness supplements to our communities across Uganda and East Africa.
                 </p>
                 <p className="text-xs text-emerald-200/80 leading-relaxed">
                   We believe that long-term vitality begins with honesty. We reject exaggerated stem-cell claims and deceptive cure-all promises. Instead, we provide verified botanical preparations, transparent label disclosures, and exceptional customer care right here in Kampala.
@@ -218,7 +218,7 @@ const MainAppContent: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-serif font-bold text-lg text-white">
-                      The Go Global Edge Commitment
+                      The Restore Boby Cells Commitment
                     </h3>
                     <p className="text-xs text-emerald-300">Setting the standard in dietary wellness</p>
                   </div>

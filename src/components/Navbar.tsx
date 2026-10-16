@@ -112,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWellnessHub, onOpenAccount
             </div>
             <div>
               <div className="text-xl sm:text-2xl font-black tracking-tight text-emerald-950 font-serif leading-none flex items-center gap-1">
-                GO GLOBAL <span className="text-amber-600">EDGE</span>
+                RESTORE <span className="text-amber-600">BOBY CELLS</span>
               </div>
               <p className="text-[10px] tracking-widest uppercase font-semibold text-emerald-700 mt-1">
                 Authentic Wellness • Uganda

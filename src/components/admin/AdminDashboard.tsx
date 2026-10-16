@@ -130,7 +130,7 @@ export const AdminDashboard: React.FC = () => {
 
   // Banner / Website Content Editing State
   const [bannerForm, setBannerForm] = useState({
-    heroTitle: settings.heroTitle || 'WELCOME TO GO GLOBAL EDGE',
+    heroTitle: settings.heroTitle || 'WELCOME TO RESTORE BOBY CELLS',
     heroSubtitle:
       settings.heroSubtitle ||
       'Discover Our Wellness Product Collection — Pure, Science-Backed Formulations for Men’s Vitality & Metabolic Balance',
@@ -139,7 +139,7 @@ export const AdminDashboard: React.FC = () => {
       'Fast Delivery Across Uganda • Verified Quality Assured • WhatsApp Orders Active',
     missionStatement:
       settings.missionStatement ||
-      'At Go Global Edge, our mission is to empower communities across Uganda and East Africa with authentic, ethically formulated wellness supplements. We reject misleading medical claims and champion transparent, verified nutritional products that inspire vitality and active living.',
+      'At Restore Boby Cells, our mission is to empower communities across Uganda and East Africa with authentic, ethically formulated wellness supplements. We reject misleading medical claims and champion transparent, verified nutritional products that inspire vitality and active living.',
   });
 
   // Workspace integration states
@@ -164,7 +164,7 @@ export const AdminDashboard: React.FC = () => {
     if (allowed.includes(codeToTest.toUpperCase())) {
       setAdminAuthenticated(true);
       setAdminLoginError('');
-      showNotification('success', 'Admin privileges granted. Welcome to Go Global Edge Management Suite!');
+      showNotification('success', 'Admin privileges granted. Welcome to Restore Boby Cells Management Suite!');
     } else {
       setAdminLoginError('Invalid security key. Please enter the authorized key or sign in with Google.');
     }
@@ -302,7 +302,7 @@ export const AdminDashboard: React.FC = () => {
       directions: 'Take 2 capsules daily with water.',
       ingredients: 'Standardized Botanical Extract Blend',
       packageInfo: '60 Vegan Capsules',
-      manufacturer: 'Go Global Edge Labs',
+      manufacturer: 'Restore Boby Cells Labs',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     });
@@ -335,15 +335,19 @@ export const AdminDashboard: React.FC = () => {
   // Pre-configured official catalog photos
   const officialPhotoPresets = [
     {
+      title: 'Revicell Cellular Botanical Nutrition (1.5g x 20 Sachets)',
+      url: '/src/assets/images/revicell_cellular_nutrition_1792130422406.jpg',
+    },
+    {
       title: 'Double Root Coffee (100% Arabica Luxury Pouch)',
       url: '/src/assets/images/double_root_coffee_1791963357040.jpg',
     },
     {
-      title: 'GoGlobal Edge SlimFit Gluco-Burn (60 Vegan Capsules)',
+      title: 'Restore Boby Cells SlimFit Gluco-Burn (60 Vegan Capsules)',
       url: '/src/assets/images/goglobal_slimfit_bottle_1791963373264.jpg',
     },
     {
-      title: 'GoGlobal Edge Panoramic Brand Hero Banner',
+      title: 'Restore Boby Cells Panoramic Brand Hero Banner',
       url: '/src/assets/images/homepage_hero_wellness_1791963391207.jpg',
     },
     {
@@ -370,7 +374,7 @@ export const AdminDashboard: React.FC = () => {
               Staff Management Portal
             </h2>
             <p className="text-xs text-gray-500 mt-1">
-              Go Global Edge Store Administration, Orders & Inventory
+              Restore Boby Cells Store Administration, Orders & Inventory
             </p>
           </div>
 
@@ -574,7 +578,7 @@ export const AdminDashboard: React.FC = () => {
           <div className="p-6 border-b border-emerald-900/80 flex items-center justify-between">
             <div>
               <div className="text-lg font-serif font-black tracking-tight text-white flex items-center gap-1.5">
-                GO GLOBAL <span className="text-amber-400">EDGE</span>
+                RESTORE <span className="text-amber-400">BOBY CELLS</span>
               </div>
               <p className="text-[10px] text-emerald-400 uppercase tracking-widest font-semibold mt-0.5">
                 Admin Console
@@ -659,7 +663,7 @@ export const AdminDashboard: React.FC = () => {
               {navMenuItems.find((m) => m.id === activeTab)?.label || 'Dashboard'}
             </h1>
             <p className="text-xs text-gray-500 font-medium">
-              Go Global Edge Store Administration • Uganda (UGX)
+              Restore Boby Cells Store Administration • Uganda (UGX)
             </p>
           </div>
 
@@ -1148,7 +1152,7 @@ export const AdminDashboard: React.FC = () => {
                     </div>
 
                     <p className="text-xs text-gray-600 leading-relaxed min-h-[36px]">
-                      {cat.description || 'Verified Go Global Edge product category.'}
+                      {cat.description || 'Verified Restore Boby Cells product category.'}
                     </p>
 
                     <div className="pt-2 border-t border-gray-200 flex items-center justify-between text-xs">

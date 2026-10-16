@@ -201,7 +201,7 @@ export const CheckoutModal: React.FC = () => {
             <ShieldCheck className="w-5 h-5 text-amber-400" />
             <div>
               <h3 className="text-base font-serif font-black tracking-tight">
-                {completedOrder ? 'Order Confirmed!' : 'Secure Checkout • Go Global Edge'}
+                {completedOrder ? 'Order Confirmed!' : 'Secure Checkout • Restore Boby Cells'}
               </h3>
               <p className="text-[11px] text-emerald-300">
                 Official Uganda Store Delivery & Payment Processing
